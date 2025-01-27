@@ -44,7 +44,7 @@ public class KosarajuAlgorithm {
             adjT[i] = new ArrayList<>();
         }
         for(int i = 0; i < n; i++) {
-            vis[i] = true;
+            vis[i] = false;
             for(int nodes = 0; nodes < adj[i].size(); nodes++) {
                 int node = adj[i].get(nodes);
                 adjT[node].add(i);
