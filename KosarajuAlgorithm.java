@@ -33,11 +33,8 @@ public class KosarajuAlgorithm {
         //sorting according to finishing time
         //the node that takes larger time to finish is at the top
         for(int i = 0; i < n; i++) {
-            for(int nodes = 0; nodes < adj[i].size(); nodes++) {
-                int node = adj[i].get(nodes);
-                if(!vis[node]) {
-                    dfs(node, adj, st, vis);
-                }
+            if(!vis[i]) {
+                dfs(i, adj, st, vis);
             }
         }
 
