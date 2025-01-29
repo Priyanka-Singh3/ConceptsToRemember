@@ -28,7 +28,6 @@ public class TopologicalSortDfs {
                 dfs(i, V, adj, vis, st);
             }
         }
-
         int i = 0;
         int ans[] = new int[V];
         while(!st.isEmpty()) {
