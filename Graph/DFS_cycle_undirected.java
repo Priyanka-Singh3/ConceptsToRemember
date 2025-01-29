@@ -27,4 +27,7 @@ public class DFS_cycle_undirected {
         }
         return false;
     }
+
+    //SC -> O(N) recursion stack space
+    //TC -> O(N + 2E) + O(N)
 }
