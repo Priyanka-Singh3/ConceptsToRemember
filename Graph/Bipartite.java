@@ -26,6 +26,7 @@ public class Bipartite {
         return true;
     }
 
+    //dfs
     boolean isBipartiteDfs(ArrayList<Integer> adj[], int V) {
         int col[] = new int[V];
         Arrays.fill(col, -1);
@@ -38,7 +39,7 @@ public class Bipartite {
     }
     boolean dfs(int node, int color, int[]col, ArrayList<Integer> adj[]) {
         col[node] = color;
-        for(int adjNode: adj[i]) {
+        for(int adjNode: adj[node]) {
             if(col[adjNode] == -1) {
                 if(dfs(adjNode, 1-color, col, adj) == false) return false;
             }
