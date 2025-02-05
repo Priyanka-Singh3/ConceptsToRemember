@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Stack;
 
 public class TopologicalSortDfs {
-    public boolean dfs(int src, int V, ArrayList<ArrayList<Integer>> adj, boolean vis[], Stack<Integer> st) {
+    public void dfs(int src, int V, ArrayList<ArrayList<Integer>> adj, boolean vis[], Stack<Integer> st) {
         vis[src] = true;
         
         //traverse for adjacent nodes
@@ -12,7 +12,7 @@ public class TopologicalSortDfs {
 
             //if the node is not visited
             if(!vis[adjNode]) {
-                dfs(adjNode, V, adj, vis)
+                dfs(adjNode, V, adj, vis, st);
             }
         }
 
