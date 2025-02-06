@@ -29,6 +29,16 @@ public class FloydWarshallAlgorithm {
                 }
             }
         }
+
+
+        // to find negative cycle , just check if cost of any node to reach itself is not zero , that is
+        // if its less than zero, then there is -ve cycle.
+        
+        for(int i = 0; i < n; i++) {
+            if(mat[i][i] < 0) {
+                System.out.println("Negative Cycle Detected");
+            }
+        }
         for(int i = 0; i < n; i++) {
             for(int j = 0; j < n; j++) {
                 if(mat[i][j] == Integer.MAX_VALUE) {
