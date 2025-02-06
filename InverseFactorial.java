@@ -1,4 +1,4 @@
-public class invFact {
+public class InverseFactorial {
 
     private static final int N = 100000;
     private static long[] fact = new long[N + 1];
